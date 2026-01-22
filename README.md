@@ -26,4 +26,6 @@ The course structure included weekly quizzes and major homework assignments. Thi
 
 👋 **Note:** These codes are intended for educational purposes and reference.
 
+👉 I hope this repository will be helpful for you!
+
 ⭐ If you find this repository useful, don't forget to give it a star!
