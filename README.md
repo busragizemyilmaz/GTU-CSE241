@@ -14,7 +14,7 @@ The primary focus of this course was to master **Object-Oriented Programming (OO
 
 The course structure included weekly quizzes and major homework assignments. This repository includes:
 
-* **12 Weekly Quizzes:** Short programming tasks conducted every week to test fundamental concepts and quick problem-solving skills.
+* **12 Weekly Quizzes:** Timed in-class programming tasks (**30 minutes limit**) conducted every week to test fundamental concepts and coding skills under pressure.
 * **4 Homework Assignments:** Comprehensive projects requiring detailed object-oriented design and implementation.
 
 ### Each folder includes:
