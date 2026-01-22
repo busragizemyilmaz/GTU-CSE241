@@ -1,0 +1,13 @@
+MOV R1, 7       ; line 1, Set counter to 7
+MOV R2, 0       ; line 2, a = 0
+MOV R3, 1       ; line 3, b = 1
+MOV R4, 0       ; line 4, Clear temporary register (temp)
+MOV R4, R2      ; line 5, temp = a
+ADD R4, R3      ; line 6, temp = a + b
+MOV R2, R3      ; line 7, a = b
+MOV R3, R4      ; line 8, b = temp
+PRN R3          ; line 9, Print current Fibonacci number
+SUB R1, 1       ; line 10, Decrement counter (R1 = R1 - 1)
+JPN R1, 13      ; line 11, If counter <= 0, jump to HLT (line 13)
+JMP 5           ; line 12, Unconditional jump to start (line 5)
+HLT             ; line 13, Halt the program

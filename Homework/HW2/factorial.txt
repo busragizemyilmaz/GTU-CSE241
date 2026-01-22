@@ -1,0 +1,16 @@
+MOV R1, 5       ; line 1, Set N=5 (R1). This is the main counter.
+MOV R2, 1       ; line 2, Set Result=1 (R2).
+MOV R3, 0       ; line 3, Clear inner counter (R3).
+MOV R4, 0       ; line 4, Clear temp sum (R4).
+JPN R1, 15      ; line 5, If R1 <= 0, jump to PRN (line 15)
+MOV R3, R1      ; line 6, Set inner counter (R3) to R1 (N).
+MOV R4, 0       ; line 7, Clear temp sum (R4) for multiplication.
+JPN R3, 12      ; line 8, If R3 <= 0, inner loop is done, jump to line 12
+ADD R4, R2      ; line 9, Add Result (R2) to temp sum (R4).
+SUB R3, 1       ; line 10, Decrement inner counter (R3--).
+JMP 8           ; line 11, Unconditional jump to inner loop start (line 8)
+MOV R2, R4      ; line 12, Update Result (R2) with the product
+SUB R1, 1       ; line 13, Decrement outer counter (R1--).
+JMP 5           ; line 14, Unconditional jump to outer loop start (line 5)
+PRN R2          ; line 15, Print the final result (5! = 120).
+HLT             ; line 16, Halt the program.

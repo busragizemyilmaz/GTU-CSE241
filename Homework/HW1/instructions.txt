@@ -1,0 +1,14 @@
+MOV R1, 10    ; line 1, initialize outer loop counter R1 with value 10
+MOV R2, 0     ; line 2, initialize total sum register R2 to 0
+MOV R3, R1    ; line 3, copy R1 to R3 to use as inner loop counter for squaring
+MOV R4, 0     ; line 4, clear register R4 before calculating the square
+ADD R4, R1    ; line 5, add R1 to R4 to calculate the square by repeated addition
+SUB R3, 1     ; line 6, decrement inner loop counter R3
+JMP R3, 9     ; line 7, if R3 is zero (squaring is done), jump to line 9
+JMP 5         ; line 8, if inner loop is not done, jump back to line 5
+ADD R2, R4    ; line 9, add the calculated square (R4) to the total sum (R2)
+SUB R1, 1     ; line 10, decrement outer loop counter R1
+JMP R1, 13    ; line 11, if R1 is zero (outer loop is done), jump to line 13
+JMP 3         ; line 12, if outer loop is not done, jump back to line 3
+PRN R2        ; line 13, print the final result from register R2
+HLT           ; line 14, finish the program

@@ -1,0 +1,14 @@
+MOV R1, 100     ; line 1, Set Dividend (R1) to 100
+MOV R2, 7       ; line 2, Set Divisor (R2) to 7
+MOV R3, 0       ; line 3, Set Quotient (R3) to 0 (This will be the result)
+MOV R4, 0       ; line 4, Clear Temp register (R4)
+MOV R5, 1       ; line 5, Load constant 1 into R5 (for incrementing quotient)
+MOV R4, R1      ; line 6, Copy Dividend (R1) to Temp (R4)
+SUB R4, R2      ; line 7, Temp (R4) = R1 - R2
+JPN R4, 12      ; line 8, If R4 <= 0, jump to end (line 12)
+MOV R1, R4      ; line 9, Update Dividend (R1) with the new value (R1 = R4)
+ADD R3, R5      ; line 10, Increment Quotient (R3 = R3 + 1)
+JMP 6           ; line 11, Unconditional jump back to loop start (line 6)
+PRN R3          ; line 12, Print the Quotient (Result should be 14)
+PRN R1          ; line 13, Print the Remainder (Result should be 2)
+HLT             ; line 14, Halt the program
